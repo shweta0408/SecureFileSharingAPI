@@ -1,0 +1,580 @@
+{
+	"id": "10541746-280a-4921-8d07-c265e08d91aa",
+	"name": "Secure File Sharing System",
+	"timestamp": "2025-01-18T05:33:47.182Z",
+	"collection_id": "32632567-45486aba-d7c6-4d54-82a1-ae664067d3a1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 18,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-01-18T05:33:42.882Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "80a59d69-d97c-465e-92f8-ffa83adfb3e4",
+			"name": "SignUp",
+			"url": "http://127.0.0.1:5000/signup",
+			"time": 604,
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED"
+			},
+			"tests": {
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				604
+			],
+			"allTests": [
+				{
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "b16ab20e-fd47-4548-85ef-c18bdb8c6c5c",
+			"name": "SignUp User Already Exists",
+			"url": "http://127.0.0.1:5000/signup",
+			"time": 51,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"User already exists": true
+			},
+			"testPassFailCounts": {
+				"User already exists": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"User already exists": true
+				}
+			]
+		},
+		{
+			"id": "c68bcdf7-5ce7-4ca4-9657-e3e4f1401aa8",
+			"name": "Login",
+			"url": "http://127.0.0.1:5000/login",
+			"time": 219,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Correct Credentials": true
+			},
+			"testPassFailCounts": {
+				"Correct Credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				219
+			],
+			"allTests": [
+				{
+					"Correct Credentials": true
+				}
+			]
+		},
+		{
+			"id": "6660320d-ae98-47c2-8ffd-4eb53eb53c6f",
+			"name": "Login Bad Credentials",
+			"url": "http://127.0.0.1:5000/login",
+			"time": 226,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Invalid Credentials": true
+			},
+			"testPassFailCounts": {
+				"Invalid Credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				226
+			],
+			"allTests": [
+				{
+					"Invalid Credentials": true
+				}
+			]
+		},
+		{
+			"id": "1312e210-e652-4517-8832-8cf75d1f2ec3",
+			"name": "Login Unverified",
+			"url": "http://127.0.0.1:5000/login",
+			"time": 226,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Unverified login": true
+			},
+			"testPassFailCounts": {
+				"Unverified login": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				226
+			],
+			"allTests": [
+				{
+					"Unverified login": true
+				}
+			]
+		},
+		{
+			"id": "48649a05-a68a-45df-a333-d0f7f5adf410",
+			"name": "Verify Email",
+			"url": "http://127.0.0.1:5000//verify-email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjZmOGU2NGQwYjA1ZTUwNjhhMWVkYzQ5IiwiZXhwIjoxNzI3Njc0Mzg3fQ.6BmibkjsCNf7KReGTPrX5eWXHCcn26AbvATO1C7sKTM",
+			"time": 105,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Email verify": true
+			},
+			"testPassFailCounts": {
+				"Email verify": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				105
+			],
+			"allTests": [
+				{
+					"Email verify": true
+				}
+			]
+		},
+		{
+			"id": "73c0b302-d7c7-492f-8492-e07d568a4c63",
+			"name": "Verify Email Expired",
+			"url": "http://127.0.0.1:5000//verify-email/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjIxLCJleHAiOjE3Mjc1ODU4NDh9.34poxJ8GB1j1_-hrxa94qaXzMuR4mr7tZoLtx9tk2qc",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Email verify expired link": true
+			},
+			"testPassFailCounts": {
+				"Email verify expired link": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Email verify expired link": true
+				}
+			]
+		},
+		{
+			"id": "8b163510-8f5e-4be2-95be-2f62e20c9293",
+			"name": "Verify Email Invalid",
+			"url": "http://127.0.0.1:5000//verify-email/invalid",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Email verify Invalid link": true
+			},
+			"testPassFailCounts": {
+				"Email verify Invalid link": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Email verify Invalid link": true
+				}
+			]
+		},
+		{
+			"id": "1c2d9194-aa19-412f-97f9-3c54b50cc508",
+			"name": "Upload",
+			"url": "http://127.0.0.1:5000/upload",
+			"time": 105,
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED"
+			},
+			"tests": {
+				"File Upload": true
+			},
+			"testPassFailCounts": {
+				"File Upload": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				105
+			],
+			"allTests": [
+				{
+					"File Upload": true
+				}
+			]
+		},
+		{
+			"id": "e3e99021-86ec-40e0-86ab-91e41f46ad23",
+			"name": "Upload Not Ops",
+			"url": "http://127.0.0.1:5000/upload",
+			"time": 56,
+			"responseCode": {
+				"code": 403,
+				"name": "FORBIDDEN"
+			},
+			"tests": {
+				"File Upload not ops": true
+			},
+			"testPassFailCounts": {
+				"File Upload not ops": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"File Upload not ops": true
+				}
+			]
+		},
+		{
+			"id": "64fb228d-063f-4811-9d10-574f23039ce4",
+			"name": "Upload Invalid File",
+			"url": "http://127.0.0.1:5000/upload",
+			"time": 51,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Incorrect file type": true
+			},
+			"testPassFailCounts": {
+				"Incorrect file type": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Incorrect file type": true
+				}
+			]
+		},
+		{
+			"id": "7c666d87-7b09-49cf-9de3-f49fddbcd900",
+			"name": "Upload No File",
+			"url": "http://127.0.0.1:5000/upload",
+			"time": 55,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"No file": true
+			},
+			"testPassFailCounts": {
+				"No file": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"No file": true
+				}
+			]
+		},
+		{
+			"id": "c8ebad95-5fa7-4216-b7bc-4a09dcee0088",
+			"name": "Get Files",
+			"url": "http://127.0.0.1:5000/files",
+			"time": 100,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"List Files": true
+			},
+			"testPassFailCounts": {
+				"List Files": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				100
+			],
+			"allTests": [
+				{
+					"List Files": true
+				}
+			]
+		},
+		{
+			"id": "7b9dc1ad-f24e-4703-b64e-72922ffd263c",
+			"name": "Generate Link",
+			"url": "http://127.0.0.1:5000/download/17d1797b-acca-4221-9c95-e3fe7c0bcdd2",
+			"time": 100,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Generate link": true
+			},
+			"testPassFailCounts": {
+				"Generate link": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				100
+			],
+			"allTests": [
+				{
+					"Generate link": true
+				}
+			]
+		},
+		{
+			"id": "d2d0c6cf-691f-4094-89f8-4355537f2968",
+			"name": "Generate Link Invalid ID",
+			"url": "http://127.0.0.1:5000/download/invalid-id",
+			"time": 102,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND"
+			},
+			"tests": {
+				"Generate link invalid id": true
+			},
+			"testPassFailCounts": {
+				"Generate link invalid id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Generate link invalid id": true
+				}
+			]
+		},
+		{
+			"id": "95ea8752-298f-4225-a397-ea598fb47282",
+			"name": "Download Link",
+			"url": "http://127.0.0.1:5000/secure-download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlX2lkIjoiMTdkMTc5N2ItYWNjYS00MjIxLTljOTUtZTNmZTdjMGJjZGQyIiwidXNlcl9pZCI6IjY2Zjc4YjNjMjM0NDJiZGI3ZTQ1YzY5ZCIsImV4cCI6MTcyNzU5MTIzNH0.OYfS_3h0L1AkUMPEoyH2zTKglux_7VhCZhDNxTjWQ3E",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Secure download": true
+			},
+			"testPassFailCounts": {
+				"Secure download": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Secure download": true
+				}
+			]
+		},
+		{
+			"id": "25aa121b-d8a3-427b-a260-69b0aa8ff6a0",
+			"name": "Download Link Expired",
+			"url": "http://127.0.0.1:5000/secure-download/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlX2lkIjoiMTdkMTc5N2ItYWNjYS00MjIxLTljOTUtZTNmZTdjMGJjZGQyIiwidXNlcl9pZCI6IjY2Zjc4YjNjMjM0NDJiZGI3ZTQ1YzY5ZCIsImV4cCI6MTcyNzUwNTk1N30.cISkk6W_5whSX2DD82EzwLw5QewjsoeX2wGvOwxQmWo",
+			"time": 54,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Download link expired": true
+			},
+			"testPassFailCounts": {
+				"Download link expired": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Download link expired": true
+				}
+			]
+		},
+		{
+			"id": "93c3eac7-dc9c-4b27-a142-cde3b2486938",
+			"name": "Download Link Invalid",
+			"url": "http://127.0.0.1:5000/secure-download/invalid-link",
+			"time": 56,
+			"responseCode": {
+				"code": 400,
+				"name": "BAD REQUEST"
+			},
+			"tests": {
+				"Download link invalid": true
+			},
+			"testPassFailCounts": {
+				"Download link invalid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"Download link invalid": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2279,
+	"collection": {
+		"requests": [
+			{
+				"id": "80a59d69-d97c-465e-92f8-ffa83adfb3e4",
+				"method": "POST"
+			},
+			{
+				"id": "b16ab20e-fd47-4548-85ef-c18bdb8c6c5c",
+				"method": "POST"
+			},
+			{
+				"id": "c68bcdf7-5ce7-4ca4-9657-e3e4f1401aa8",
+				"method": "POST"
+			},
+			{
+				"id": "6660320d-ae98-47c2-8ffd-4eb53eb53c6f",
+				"method": "POST"
+			},
+			{
+				"id": "1312e210-e652-4517-8832-8cf75d1f2ec3",
+				"method": "POST"
+			},
+			{
+				"id": "48649a05-a68a-45df-a333-d0f7f5adf410",
+				"method": "GET"
+			},
+			{
+				"id": "73c0b302-d7c7-492f-8492-e07d568a4c63",
+				"method": "GET"
+			},
+			{
+				"id": "8b163510-8f5e-4be2-95be-2f62e20c9293",
+				"method": "GET"
+			},
+			{
+				"id": "1c2d9194-aa19-412f-97f9-3c54b50cc508",
+				"method": "POST"
+			},
+			{
+				"id": "e3e99021-86ec-40e0-86ab-91e41f46ad23",
+				"method": "POST"
+			},
+			{
+				"id": "64fb228d-063f-4811-9d10-574f23039ce4",
+				"method": "POST"
+			},
+			{
+				"id": "7c666d87-7b09-49cf-9de3-f49fddbcd900",
+				"method": "POST"
+			},
+			{
+				"id": "c8ebad95-5fa7-4216-b7bc-4a09dcee0088",
+				"method": "GET"
+			},
+			{
+				"id": "7b9dc1ad-f24e-4703-b64e-72922ffd263c",
+				"method": "GET"
+			},
+			{
+				"id": "d2d0c6cf-691f-4094-89f8-4355537f2968",
+				"method": "GET"
+			},
+			{
+				"id": "95ea8752-298f-4225-a397-ea598fb47282",
+				"method": "GET"
+			},
+			{
+				"id": "25aa121b-d8a3-427b-a260-69b0aa8ff6a0",
+				"method": "GET"
+			},
+			{
+				"id": "93c3eac7-dc9c-4b27-a142-cde3b2486938",
+				"method": "GET"
+			}
+		]
+	}
+}
